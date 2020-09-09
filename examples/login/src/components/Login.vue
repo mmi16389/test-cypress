@@ -11,7 +11,7 @@
             required
           ></v-text-field>
 
-          <v-text-field v-model="pass" :rules="passRules" label="Mot de passe" required></v-text-field>
+          <v-text-field v-model="pass" :rules="passRules" label="Mot de passe" type="password" required></v-text-field>
 
           <v-checkbox v-model="checkbox" label="Se souvenir de moi" required></v-checkbox>
 
@@ -23,9 +23,9 @@
             id="submit-btn"
           >Validate</v-btn>
 
-          <v-btn color="error" class="mr-4" @click="reset">Reset Form</v-btn>
+          <v-btn color="error" class="mr-4" id="reset-btn" @click="reset">Reset Form</v-btn>
         </v-form>
-      </v-col>
+      </v-col> 
     </v-row>
   </v-container>
 </template>
@@ -47,7 +47,7 @@ export default class Form extends Vue {
 
   passRules = [
     (v: any) => !!v || 'Password is required',
-    (v: any) => (v && v.length <= 4) || 'Password must be less than 10 characters'
+    (v: any) => (v && v.length >= 4) || 'Password must be more than 4 characters'
   ];
 
   pass = ''; 
