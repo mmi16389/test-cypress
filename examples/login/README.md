@@ -33,3 +33,8 @@ For Prod(CI/CD)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Others Credits
+
+[@vue/cli-plugin-e2e-cypress]((https://cli.vuejs.org/core-plugins/e2e-cypress.html))
