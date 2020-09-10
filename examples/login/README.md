@@ -22,8 +22,11 @@ yarn lint
 
 ### E2E testing
 ```
+
+For Dev
 - yarn test:e2e:gui
 
+For Prod(CI/CD)
 - yarn test:e2e
 
 ```
